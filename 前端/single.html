@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>New Shop</title>
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<link href="css/mui.picker.css" rel="stylesheet" />
+		<link href="css/mui.poppicker.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+		<link rel="stylesheet" href="css/me.css" />
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/icons-extra.css" />
+		<script src="js/me.js"></script>
+		<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			
+			.mui-bar .mui-pull-left .mui-icon {
+				padding-right: 5px;
+				font-size: 28px;
+			}
+			
+			.mui-bar .mui-btn {
+				font-weight: normal;
+				font-size: 17px;
+			}
+			
+			.mui-bar .mui-btn-link {
+				top: 1px;
+			}
+			
+			.mui-content img {
+				width: 100%;
+			}
+			
+			.hm-description {
+				margin: 15px;
+			}
+			
+			.hm-description>li {
+				font-size: 14px;
+				color: #8f8f94;
+			}
+			
+			.mui-row.mui-fullscreen>[class*="mui-col-"] {
+				margin-top: 49%;
+				margin-bottom: 14%;
+				height: 58.2%;
+			}
+			
+			.mui-col-xs-3,
+			.mui-control-content {
+				overflow-y: auto;
+				height: 100%;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				
+				line-height: 50px;
+				width: 100%;
+			}
+			
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				background-color: #fff;
+			}
+			
+			.content-center {
+				text-align: center;
+				padding-top: 50px;
+			}
+			
+			.center-left {
+				width: 30%;
+				padding-left: 10px;
+			}
+			
+			.center-right {
+				width: 70%;
+				text-align: left;
+			}
+			.single-center-1,
+			.single-center-2{
+				
+				position: relative;
+				text-align: center;
+				width: 100%;
+				
+			}
+			.single-tab-left,
+			.single-tab-right{
+				
+				width: 100%;
+				text-align: center;
+				
+				
+			}
+			.single-word-1{
+				
+				margin-top: 50px;
+			}
+			.single-word-2{
+				
+				margin-top: 40px;
+			}
+			
+			.single-word-2 span {
+				font-weight: bold;
+				font-size: larger;
+				margin-top: 40px;
+				margin-right: 10px;
+				margin-left: 10px;
+			}
+			
+			.single-button {
+				text-align: center;
+			}
+			
+			.single-button button {
+				background-color: #FE9E1F;
+				color: #FFFFFF;
+				font-family: "楷体";
+				font-size: large;
+				font-weight: bold;
+				margin-bottom: 15px;
+			}
+			
+			.mui-content {
+				height: 0px;
+				margin: 0px;
+				background-color: #efeff4;
+			}
+			
+			h5.mui-content-padded {
+				margin-left: 0px !important;
+				margin-top: 20px !important;
+			}
+			
+			.mui-card {
+				margin: 0px;
+			}
+			
+			.single-descript {
+				
+				margin-bottom: 20px;
+			}
+			
+			.single-descript h5 {
+				/*margin-left: 35%;*/
+				width: 100%;
+				
+			}
+			
+			.single-descript h4 {
+				/*margin-left: 22%;*/
+				width: 100%;
+				
+			}
+			
+			.single-img{
+				
+				height: auto;
+				margin-bottom: 50px;
+			}
+			.single-img img {
+				width: 100%;
+				
+			}
+			.tt {
+				
+			display: flex;
+			}
+			.tt a{
+				
+				width: 60px;
+			}
+			
+			.tt2 {
+				border: 1px solid #c8c7cc
+			}
+			.single-content{
+				
+				width: 100%;
+				
+			}
+			.content-s{
+				
+				width: 100%;
+				
+			}
+			.content-s span{
+				
+				margin-right: 10px;
+			}
+			.contact-s h2{
+				
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+
+	<body onload="resetsg()">
+		<div class="mui-navbar-inner mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>
+				</button>
+			<h1 class="mui-center mui-title">导航栏</h1>
+			<div class="login">
+				<div id="login-left">
+				<form action="login.html">
+				<button type="submit">登录</button>
+				</form></div>
+				<div id="login-right"></div>
+			</div>
+		</div>
+		<br /><br />
+		<div class="content-center">
+			<div class="single-center-1">
+				<div class="single-tab-left" id="g_picture">
+					
+				</div>
+				<div class="single-tab-right">
+					<div class="single-word-1">
+						<div class="single-word-2">
+							<span id="g_name">男士秋衣</span>
+
+							<span id="g_money">价格:180￥</span>
+						</div>
+						<br />
+						<div class="single-button">
+							购买数量:
+							<div class="mui-numbox" data-numbox-min='1' data-numbox-max='100'>
+								<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+								<input class="mui-input-numbox" type="number" value="1" id="g_numbers" />
+								<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+							</div>
+							<button onclick="addcart()">加入购物车</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="single-content">
+		<div class="mui-col-xs-3">
+			<div class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+				<div class="tt">
+					<a class="mui-control-item" href="#content1">详情</a>
+					<a class="mui-control-item" href="#content2">评论</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="mui-col-xs-9" style="border-left: 1px solid #c8c7cc;">
+			<div id="content1" class="content-s mui-control-content mui-active">
+				<div class="single-descript">
+					<h4>详细信息:</h4><br />
+					
+					<h5 style="font-weight: bold;" id="g_descript"></h5>
+				</div>
+				<div class="single-img" id="single-img">
+				</div>
+				
+			</div>
+			<div id="content2" class="mui-control-content content-s">
+				<h4>精选评论:</h4><br />
+				
+			</div>
+		</div>
+</div>
+			
+
+
+		
+
+			<div class="mui-content">
+				<nav class="mui-bar mui-bar-tab">
+					<div class="mui-bottom-fi mui-tab-1">
+						<a id="defaultTab" class="mui-active" onclick="skips('index')">
+							<span class="mui-icon mui-icon-home"></span>
+							<span class="mui-tab-label">首页</span>
+						</a>
+					</div>
+					<div class="mui-bottom-fi mui-tab-1">
+						<a onclick="skips('products')">
+							<span class="mui-icon-extra mui-icon-extra-class"></span>
+							<span class="mui-tab-label">浏览</span>
+						</a>
+					</div>
+					<div class="mui-bottom-fi mui-tab-1">
+						<a onclick="skips('center')">
+							<span class="mui-icon mui-icon-contact"></span>
+							<span class="mui-tab-label">个人中心</span>
+						</a>
+					</div>
+					<div class="mui-bottom-fi mui-tab-1">
+			<a onclick="skips('cart')">
+				<span class="mui-icon-extra mui-icon-extra-cart"></span>
+				<span class="mui-tab-label">购物车</span>
+			</a></div>
+					<div class="mui-bottom-fi mui-tab-1">
+						<a onclick="skips('setting')">
+							<span class="mui-icon mui-icon-gear"></span>
+							<span class="mui-tab-label">设置</span>
+						</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+		
+		
+		<script src="js/mui.min.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>New Shop</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/me.css" />
+		<link rel="stylesheet" href="css/icons-extra.css" />
+		<script src="js/me.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js">
+		</script>
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			
+			.mui-bar .mui-pull-left .mui-icon {
+				padding-right: 5px;
+				font-size: 28px;
+			}
+			
+			.mui-bar .mui-btn {
+				font-weight: normal;
+				font-size: 17px;
+			}
+			
+			.mui-bar .mui-btn-link {
+				top: 1px;
+			}
+			
+			.mui-content img {
+				width: 100%;
+			}
+			
+			.hm-description {
+				margin: 15px;
+			}
+			
+			.hm-description>li {
+				font-size: 14px;
+				color: #8f8f94;
+			}
+			
+			.mui-row.mui-fullscreen>[class*="mui-col-"] {
+				margin-top: 49%;
+				margin-bottom: 14%;
+				height: 58.2%;
+			}
+			
+			.mui-col-xs-3,
+			.mui-control-content {
+				overflow-y: auto;
+				height: 100%;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				line-height: 50px;
+				width: 100%;
+			}
+			
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				background-color: #fff;
+			}
+			
+			.flex-container {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-flow: row wrap;
+				justify-content: space-between;
+				text-align: center;
+			}
+			
+			.mui-content-padded {
+				padding: 10px;
+			}
+			
+			.mui-content-padded a {
+				margin: 3px;
+				width: 50px;
+				height: 50px;
+				display: inline-block;
+				text-align: center;
+				background-color: #fff;
+				border: 1px solid #ddd;
+				border-radius: 25px;
+				background-clip: padding-box;
+			}
+			
+			.mui-content-padded a .mui-icon-extra {
+				margin-top: 12px;
+			}
+			
+			.mui-spinner,
+			.mui-spinner-white {
+				margin-top: 12px
+			}
+			
+			.active .mui-spinner-indicator {
+				background: #007AFF;
+			}
+			
+			.mui-content a {
+				color: #8F8F94;
+			}
+			
+			.mui-content a.active {
+				color: #007aff;
+			}
+			
+			.scan {
+				border: 1px solid #E2E2E2;
+				border: 5px solid #ffffff;
+				-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+				-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+				padding: 0em;
+				width: 50%;
+				height: 320px;
+				text-align: center;
+				float: left;
+				margin-top: 5px;
+			}
+			
+			.scan img {
+				margin-top: 15px;
+				border: solid 5px #FFFFFF;
+				border-image: 10px #FFFFF;
+			}
+			
+			.grid-product {
+				width: 70%;
+				margin: 0 auto;
+			}
+			
+			.women h6 {
+				font-size: 18px;
+				margin: 0.4em 0;
+				height: 20px;
+			}
+			
+			.women h6 button {
+				color: #1565C0;
+				text-decoration: none;
+			}
+			
+			.women button {
+				background-color: #FE9E1F;
+				color: #FFFFFF;
+				font-family: "楷体";
+				font-size: large;
+				font-weight: bold;
+				margin-bottom: 15px;
+				
+			}
+			
+			.women p {
+				font-size: 1em;
+				color: #999;
+				margin: 0.9em 0;
+			}
+			.hei{
+				
+				height: 100px;
+				width: 100%;
+				margin-bottom: 20%;
+			}
+		</style>
+		
+	</head>
+
+	<body onload="resetpc()">
+		<div class="mui-navbar-inner mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>
+				</button>
+			<h1 class="mui-center mui-title">浏览</h1>
+			<div class="login">
+				<div id="login-left">
+					<form action="login.html">
+						<button type="submit">登录</button>
+					</form>
+				</div>
+				<div id="login-right"></div>
+			</div>
+		</div>
+
+		<div class="mui-content">
+			<!--轮播图片-->
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group">
+					<!-- 第一张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/b2.jpg">
+						</a>
+					</div>
+					<!-- 第二张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/b3.jpg">
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/b1.jpg">
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/b4.jpg">
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class=" mui-input-row mui-search">
+				<input type="search" id="search"  class="mui-input-clear" placeholder="" value="">
+			</div>
+			<script>
+					//点击回车响应事件
+					$("#search").on('keypress', function(e) {
+						
+						var keycode = e.keyCode;
+						var searchName = $(this).val();
+						if(keycode == '13') {
+							e.preventDefault();
+							
+							gets(content1,searchName,2);
+							
+						}
+					});
+				</script>
+		<div class="mui-row mui-fullscreen">
+			<div class="mui-col-xs-3">
+
+				<div class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+					<a class="mui-control-item" href="#content1" onclick="gets(content1,'上衣',1)">上衣</a>
+					<a class="mui-control-item" href="#content2" onclick="gets(content2,'鞋子',1)">鞋子</a>
+					<a class="mui-control-item" href="#content3" onclick="gets(content3,'裤子',1)">裤子</a>
+					<a class="mui-control-item" href="#content4" onclick="gets(content4,'电脑',1)">电脑</a>
+					<a class="mui-control-item" href="#content5" onclick="gets(content5,'手机',1)">手机</a>
+					<a class="mui-control-item" href="#content6" onclick="gets(content6,'电视',1)">电视</a>
+					<a class="mui-control-item" href="#content7" onclick="gets(content7,'零食',1)">零食</a>
+					<a class="mui-control-item" href="#content8" onclick="gets(content8,'饮料',1)">饮料</a>
+					<a class="mui-control-item" href="#content9" onclick="gets(content9,'自行车',1)">自行车</a>
+					<a class="mui-control-item" href="#content10" onclick="gets(content10,'化妆品',1)">化妆品</a>
+				</div>
+			</div>
+			<div class="mui-col-xs-9" style="border-left: 1px solid #c8c7cc;">
+				<div id="content1" class="mui-control-content mui-active">
+				</div>
+				<div id="content2" class="mui-control-content">
+				</div>
+				<div id="content3" class="mui-control-content">
+				</div>
+				<div id="content4" class="mui-control-content">
+				</div>
+				<div id="content5" class="mui-control-content">
+				</div>
+				<div id="content6" class="mui-control-content">
+				</div>
+				<div id="content7" class="mui-control-content">
+				</div>
+				<div id="content8" class="mui-control-content">
+				</div>
+				<div id="content9" class="mui-control-content">
+				</div>
+				<div id="content10" class="mui-control-content">
+				</div>
+			</div>
+		</div>
+
+		<div class="mui-content">
+			<nav class="mui-bar mui-bar-tab">
+				<div class="mui-bottom-fi mui-tab-1">
+					<a id="defaultTab" class="mui-active" onclick="skip('index')">
+						<span class="mui-icon mui-icon-home"></span>
+						<span class="mui-tab-label">首页</span>
+					</a>
+				</div>
+				<div class="mui-bottom-fi-no mui-tab-1">
+					<a onclick="skip('products')">
+						<span class="mui-icon-extra mui-icon-extra-class"></span>
+						<span class="mui-tab-label">浏览</span>
+					</a>
+				</div>
+				<div class="mui-bottom-fi mui-tab-1">
+					<a onclick="skip('center')">
+						<span class="mui-icon mui-icon-contact"></span>
+						<span class="mui-tab-label">个人中心</span>
+					</a>
+				</div>
+				<div class="mui-bottom-fi mui-tab-1">
+					<a onclick="skip('cart')">
+						<span class="mui-icon-extra mui-icon-extra-cart"></span>
+						<span class="mui-tab-label">购物车</span>
+					</a>
+				</div>
+				<div class="mui-bottom-fi mui-tab-1">
+					<a onclick="skip('setting')">
+						<span class="mui-icon mui-icon-gear"></span>
+						<span class="mui-tab-label">设置</span>
+					</a>
+				</div>
+			</nav>
+		</div>
+
+		</div>
+		
+
+	</body>
+
+</html>

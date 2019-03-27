@@ -1,0 +1,416 @@
+.accessories-w3l {
+	text-align: center;
+	height: 40px;
+	background: url(../img/ban1.jpg) no-repeat 0px 0px;
+	background-size: 100% 100%;
+	padding: 10em 0;
+}
+
+h3.tittle {
+	border-top: 10px;
+	font-size: 3em;
+	color: #fff;
+}
+
+.counts {
+	text-align: center;
+	padding-top: 35px;
+}
+
+.accessories-w3l span {
+	font-size: 5em;
+	color: #fff;
+	font-family: 'Cagliostro', sans-serif;
+	display: block;
+}
+
+h2.tittle {
+	text-align: center;
+	font-size: 2em;
+	color: #1565C0;
+}
+
+.mui-preview-image.mui-fullscreen {
+	position: fixed;
+	z-index: 20;
+	background-color: #000;
+}
+
+.mui-preview-header,
+.mui-preview-footer {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	z-index: 10;
+}
+
+.mui-preview-header {
+	height: 44px;
+	top: 0;
+}
+
+.mui-preview-footer {
+	height: 50px;
+	bottom: 0px;
+}
+
+.mui-preview-header .mui-preview-indicator {
+	display: block;
+	line-height: 25px;
+	color: #fff;
+	text-align: center;
+	margin: 15px auto 4;
+	width: 70px;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 12px;
+	font-size: 16px;
+}
+
+.mui-preview-image {
+	display: none;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.mui-preview-image.mui-preview-in {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+.mui-preview-image.mui-preview-out {
+	background: none;
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut;
+}
+
+.mui-preview-image.mui-preview-out .mui-preview-header,
+.mui-preview-image.mui-preview-out .mui-preview-footer {
+	display: none;
+}
+
+.mui-zoom-scroller {
+	position: absolute;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	-webkit-backface-visibility: hidden;
+}
+
+.mui-zoom {
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.mui-slider .mui-slider-group .mui-slider-item img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img {
+	width: 100%;
+}
+
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item {
+	display: inline-table;
+}
+
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.mui-preview-loading {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.mui-preview-loading.mui-active {
+	display: block;
+}
+
+.mui-preview-loading .mui-spinner-white {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -25px;
+	margin-top: -25px;
+	height: 50px;
+	width: 50px;
+}
+
+.mui-preview-image img.mui-transitioning {
+	-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+	transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+p img {
+	max-width: 100%;
+	height: auto;
+}
+
+.content-height {
+	height: 380px;
+	padding-bottom: 50px;
+}
+
+.content-height2 {
+	height: 1100px;
+	padding-bottom: 50px;
+}
+
+html,
+body {
+	background-color: #efeff4;
+}
+
+.mui-bar .mui-pull-left .mui-icon {
+	padding-right: 5px;
+	font-size: 28px;
+}
+
+.mui-bar .mui-btn {
+	font-weight: normal;
+	font-size: 17px;
+}
+
+.mui-bar .mui-btn-link {
+	top: 1px;
+}
+
+.mui-content img {
+	width: 220px;
+	
+}
+
+.hm-description {
+	margin: 15px;
+}
+
+.hm-description>li {
+	font-size: 14px;
+	color: #8f8f94;
+}
+
+.mui-row.mui-fullscreen>[class*="mui-col-"] {
+	margin-top: 49%;
+	margin-bottom: 14%;
+	height: 58.2%;
+}
+.mui-row img{
+	height: 110px;
+	width: 110px;
+}
+.mui-col-xs-3,
+.mui-control-content {
+	overflow-y: auto;
+	height: 100%;
+}
+
+.mui-segmented-control .mui-control-item {
+	line-height: 50px;
+	width: 100%;
+}
+
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+	background-color: #fff;
+}
+
+.border-m1,
+.border-m2 {
+	position: relative;
+	min-height: 1px;
+	padding-right: 10px;
+	padding-left: 10px;
+	height: auto;
+}
+
+.product-word {
+	text-align: center;
+}
+
+
+/*设置每一行多少个物品*/
+
+.product-tab {
+	float: left;
+	width: 50%;
+	padding: 0 0px;
+}
+
+
+/*设置边框阴影*/
+
+.grid-arr {
+	border: 1px solid #E2E2E2;
+	border: 5px solid #ffffff;
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	padding: 0em;
+	text-align: center;
+	height: 320px;
+	margin-right: 10px;
+}
+
+.grid-arr figure {
+	margin: 10px;
+}
+
+.login {
+	text-align: right;
+}
+
+.img-responsive,
+.thumbnail>img,
+.thumbnail a>img,
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.mui-bottom-fi {
+	width: 20%;
+	color: #EFEFF4;
+	float: left;
+	text-align: center;
+	top: 3px;
+	height: 24px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.mui-bottom-fi-no {
+	width: 20%;
+	color: #EFEFF4;
+	float: left;
+	text-align: center;
+	top: 3px;
+	height: 24px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.mui-bottom-fi a {
+	color: #929292;
+}
+
+.mui-bottom-fi:active {
+	background: 0 0;
+}
+
+.mui-btn-block-1 {
+	font-size: 18px;
+	display: block;
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 15px 0
+}
+
+.mui-bar-tab .mui-tab-1 .mui-icon {
+	top: 3px;
+	width: 24px;
+	height: 24px;
+	padding-top: 0;
+	padding-bottom: 0
+}
+
+.mui-bar-tab .mui-tab-1 .mui-icon~.mui-tab-label {
+	font-size: 11px;
+	margin-top: 7px;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis
+}
+
+
+.mui-bar-tab .mui-tab-1 .mui-icon-extra {
+	top: 3px;
+	width: 24px;
+	height: 24px;
+	padding-top: 0;
+	padding-bottom: 0
+}
+
+.mui-bar-tab .mui-tab-1 .mui-icon-extra~.mui-tab-label {
+	font-size: 11px;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis
+}
+
+.mui-bar-tab .mui-tab-1 .mui-icon-extra:active {
+	background: 0 0
+}
+
+.login-reg{
+	
+	font-size: 18px;
+	display: block;
+	width: 100%;
+	height: 40px;
+	margin-bottom: 10px;
+	padding: 15px 0
+	color: #fff;
+	border: 1px solid #007aff;
+	background-color: #007aff;
+	line-height: 1.42;
+}

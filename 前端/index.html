@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>New Shop</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/me.css" />
+		<link rel="stylesheet" href="css/icons-extra.css" />
+		<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+		<script src="js/me.js"></script>
+		<style>
+			.border-m1 button{
+				
+				background-color: #FE9E1F;
+				color: #FFFFFF;
+				font-family: "楷体";
+				font-size: large;
+				font-weight: bold;
+				margin-bottom: 15px;
+			}
+			.border-m1 img{
+				
+				text-align: center;
+				height: 150px;
+				width: 150px;
+				border: solid #FFFFFF;
+			}
+			.border-m1 h6{
+				
+				font-size: large;
+				font-family: "楷体";
+				font-weight: bold;
+				height: 40px;
+			}
+			.border-m1 figure{
+				
+				
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body onload="reset()">
+		<div class="mui-navbar-inner mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>
+				</button>
+			<h1 class="mui-center mui-title">导航栏</h1>
+			
+			<div class="login">
+				<div id="login-left">
+				<form action="login.html">
+				<button type="submit">登录</button>
+				</form>
+				</div>
+				<div id="login-right"></div>
+			</div>
+		</div>
+		<br />
+		<div class="mui-content">
+			<!--轮播图片-->
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group">
+					<!-- 第一张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/b2.jpg">
+						</a>
+					</div>
+					<!-- 第二张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/b3.jpg">
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/b1.jpg">
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/b4.jpg">
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+			<br />
+			<div class=" mui-input-row mui-search">
+				<input type="search" id="search" class="mui-input-clear" placeholder="" value="">
+				<script>
+					//点击回车响应事件
+					$("#search").on('keypress', function(e) {
+						var keycode = e.keyCode;
+						var searchName = $(this).val();
+						if(keycode == '13') {
+							e.preventDefault();
+							skip('products');
+							gets(content1,searchName,2);
+						}
+					});
+				</script>
+			</div>
+		</div>
+
+			<h2 class="tittle">最新产品</h2>
+
+		<div class="mui-content content-height">
+			<div class="mui-content-padded">
+				<div class="border-m1 product-word">
+					<div class="border-m2 product-tab">
+						<div class="grid-arr">
+							<figure>
+								<a onclick="onsingle(10)">
+									<img src="img/9-1.jpg" class="img-responsive" data-preview-src="" data-preview-group="1" />
+								</a>
+							</figure>
+							<div>
+								<h6>北极绒风衣</h6>
+								<del>￥169.00</del>
+									<em class="item_price">￥119.00</em><br />
+								<button onclick="onsingle(10)">即刻订购</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="border-m2 product-tab">
+						<div class="grid-arr">
+							<figure>
+								<a onclick="onsingle(11)">
+									<img src="img/10-2.jpg" class="img-responsive" data-preview-src="" data-preview-group="1"/>
+								</a>
+							</figure>
+
+							<div>
+								<h6>冬季加厚毛呢风衣</h6>
+								<del>￥210.00</del>
+									<em class="item_price">￥199.00</em><br />
+								<button onclick="onsingle(11)">即刻订购</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			</div>
+			
+				<div class="accessories-w3l">
+				
+						<div>
+					<span>畅想折扣</span>
+					</div>
+					<div class="counts">
+					<h3 class="tittle">最高可减20%！</h3>
+					</div>
+			</div>
+			
+				<div class="mui-content content-height2">
+				<div class="mui-content-padded">
+				
+				<h2 class="tittle">火爆上线</h2><br>
+				<div class="border-m1 product-word">
+					<div class="border-m2 product-tab">
+						<div class="grid-arr">
+							<figure>
+								<a onclick="onsingle(12)">
+									<img src="img/11.jpg" class="img-responsive" data-preview-src="" data-preview-group="1"/>
+								</a>
+							</figure>
+
+							<div>
+								<h6>跟斗小猪风衣</h6>
+								<del>￥145.00</del>
+									<em class="item_price">￥128.00</em><br />
+								<button onclick="onsingle(12)">即刻订购</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="border-m2 product-tab">
+						<div class="grid-arr">
+							<figure>
+								<a onclick="onsingle(14)">
+									<img src="img/12-1.jpg" class="img-responsive" data-preview-src="" data-preview-group="1"/>
+								</a>
+							</figure>
+
+							<div>
+								<h6>防晒衣男女透气</h6>
+								<del>￥199.00</del><br />
+									<em class="item_price">￥99.00</em><br />
+								<button onclick="onsingle(14)">即刻订购</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="border-m1 product-word">
+					<div class="border-m2 product-tab">
+						<div class="grid-arr">
+							<figure>
+								<a onclick="onsingle(77)">
+									<img src="img/5-1.jpg" class="img-responsive" data-preview-src="" data-preview-group="1"/>
+								</a>
+							</figure>
+
+							<div>
+								<h6>小米电视4C</h6>
+								<del>￥2199.00</del>
+									<em class="item_price">￥1899.00</em><br />
+								<button onclick="onsingle(77)">即刻订购</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="border-m2 product-tab">
+						<div class="grid-arr">
+							<figure>
+								<a onclick="onsingle(81)">
+									<img src="img/6-1.jpg" class="img-responsive" data-preview-src="" data-preview-group="1"/>
+								</a>
+							</figure>
+
+							<div>
+								<h6>曲面HDR超薄电视机</h6>
+								<del>￥2999.00</del>
+									<em class="item_price">￥2588.00</em><br />
+								<button onclick="onsingle(81)">即刻订购</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				
+				<div class="border-m1 product-word">
+					<div class="border-m2 product-tab">
+						<div class="grid-arr">
+							<figure>
+								<a onclick="onsingle(164)">
+									<img src="img/17-1.jpg" class="img-responsive" data-preview-src="" data-preview-group="1"/>
+								</a>
+							</figure>
+
+							<div>
+								<h6>科颜氏高保湿霜</h6>
+								<del>￥499.00</del>
+									<em class="item_price">￥400.00</em><br />
+								<button onclick="onsingle(164)">即刻订购</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="border-m2 product-tab">
+						<div class="grid-arr">
+							<figure>
+								<a onclick="onsingle(157)">
+									<img src="img/16-1.jpg" class="img-responsive" data-preview-src="" data-preview-group="1"/>
+								</a>
+							</figure>
+
+							<div>
+								<h6>法国兰蔻化妆品组合</h6>
+								<del>￥1099.00</del>
+									<em class="item_price">￥918.00</em><br />
+								<button onclick="onsingle(157)">即刻订购</button>
+							</div>
+						</div>
+					</div>
+
+				</div><br /><br />
+
+				
+		</div>
+</div>
+		<div class="mui-content">
+			<nav class="mui-bar mui-bar-tab">
+			<div class="mui-bottom-fi-no mui-tab-1">
+			<a id="defaultTab" class="mui-active" onclick="skip('index')">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a></div>
+			<div class="mui-bottom-fi mui-tab-1">
+			<a onclick="skip('products')">
+				<span class="mui-icon-extra mui-icon-extra-class"></span>
+				<span class="mui-tab-label">浏览</span>
+			</a></div>
+			<div class="mui-bottom-fi mui-tab-1">
+			<a onclick="skip('center')">
+				<span class="mui-icon mui-icon-contact"></span>
+				<span class="mui-tab-label">个人中心</span>
+			</a></div>
+			<div class="mui-bottom-fi mui-tab-1">
+			<a onclick="skip('cart')">
+				<span class="mui-icon-extra mui-icon-extra-cart"></span>
+				<span class="mui-tab-label">购物车</span>
+			</a></div>
+			<div class="mui-bottom-fi mui-tab-1">
+			<a onclick="skip('setting')">
+				<span class="mui-icon mui-icon-gear"></span>
+				<span class="mui-tab-label">设置</span>
+			</a></div>
+		</nav>
+		</div>
+		
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.zoom.js"></script>
+		<script src="js/mui.previewimage.js"></script>
+		
+		
+
+	</body>
+
+</html>

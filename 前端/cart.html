@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>New Shop</title>
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<link href="css/mui.picker.css" rel="stylesheet" />
+		<link href="css/mui.poppicker.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+		<link rel="stylesheet" href="css/me.css" />
+		<link rel="stylesheet" href="css/icons-extra.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/font-awesome.css" />
+		<script src="js/me.js"></script>
+		<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			
+			.mui-bar .mui-pull-left .mui-icon {
+				padding-right: 5px;
+				font-size: 28px;
+			}
+			
+			.mui-bar .mui-btn {
+				font-weight: normal;
+				font-size: 17px;
+			}
+			
+			.mui-bar .mui-btn-link {
+				top: 1px;
+			}
+			
+			.mui-content img {
+				width: 100%;
+			}
+			
+			.hm-description {
+				margin: 15px;
+			}
+			
+			.hm-description>li {
+				font-size: 14px;
+				color: #8f8f94;
+			}
+			
+			.mui-row.mui-fullscreen>[class*="mui-col-"] {
+				margin-top: 49%;
+				margin-bottom: 14%;
+				height: 58.2%;
+			}
+			
+			.mui-col-xs-3,
+			.mui-control-content {
+				overflow-y: auto;
+				height: 100%;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				line-height: 50px;
+				width: 100%;
+			}
+			
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				background-color: #fff;
+			}
+			
+			.content-center {
+				text-align: center;
+				padding-top: 50px;
+			}
+			
+			.center-left {
+				width: 30%;
+				padding-left: 10px;
+			}
+			
+			.center-right {
+				width: 70%;
+				text-align: left;
+			}
+			.container-1 {
+				height: auto;
+			  padding-right: 15px;
+			  padding-left: 15px;
+			  margin-right: auto;
+			  margin-left: auto;
+			  margin-bottom: 100px;
+			}
+			.cart{
+				
+				width: 100%;
+				background-color: #FFFFFF;
+				margin-top: 20px;
+				box-shadow: 5px 5px 2px #888888;
+			}
+			.cart img{
+				
+				width: 100px;
+				height: 140px;
+				border: solid #EFEFF4;
+				margin: 10px;
+			}
+			.cart button{
+				
+				/*display: table-cell;*/
+    			vertical-align: middle;
+    			margin-left: 10%;
+			}
+			.cart span{
+				
+				color: #8F8F94;
+				font-family: "黑体";
+				font-size: 15px;
+				margin-left: 10px;
+				
+			}
+			.bu-button{
+				
+				text-align: right;
+				margin-right: 2%;
+				margin-top: 70px;
+				
+			}
+			.bu-button input[type="button"]{
+				background-color: #FE9E1F;
+				color: #FFFFFF;
+				font-family: "楷体";
+				font-size: large;
+				font-weight: bold;
+				margin-bottom: 15px;
+			}
+			.h2-w{
+				
+				margin-left: 2%;
+				
+			}
+		</style>
+	</head>
+
+	<body onload="resetca()">
+		
+		<div class="mui-navbar-inner mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>
+				</button>
+			<h1 class="mui-center mui-title">导航栏</h1>
+			
+			<div class="login">
+				<div id="login-left">
+				<form action="login.html">
+				<button type="submit">登录</button>
+				</form>
+				</div>
+				<div id="login-right"></div>
+			</div>
+		</div>
+		<br /><br />
+		<div class="mui-content">
+			<!--轮播图片-->
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group">
+					<!-- 第一张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/b2.jpg">
+						</a>
+					</div>
+					<!-- 第二张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/b3.jpg">
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/b1.jpg">
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/b4.jpg">
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content">
+		<div class="cart-items">
+			<div class="container-1">
+				<div class="h2-w">
+				<h2>我的购物车</h2>
+				</div>
+				<br />
+				<div id="concar">
+               <h2 style="color: #2295EB;">购物车空空如也，快去浏览吧。</h2>
+              </div>
+              	<div class="bu-button">
+               <form>
+               	<input type="hidden" id="g_count" />
+               	<input type="button" onclick="buycar()" value="提交订单"/>
+               
+               	<!--<button onclick="buycar()">提交订单</button>-->
+               
+               </form>
+               </div>
+			</div>
+		</div>
+	</div>
+
+			<div class="mui-content">
+				<nav class="mui-bar mui-bar-tab">
+					<div class="mui-bottom-fi mui-tab-1">
+						<a id="defaultTab" class="mui-active" onclick="skip('index')">
+							<span class="mui-icon mui-icon-home"></span>
+							<span class="mui-tab-label">首页</span>
+						</a>
+					</div>
+					<div class="mui-bottom-fi mui-tab-1">
+						<a onclick="skip('products')">
+							<span class="mui-icon-extra mui-icon-extra-class"></span>
+							<span class="mui-tab-label">浏览</span>
+						</a>
+					</div>
+					<div class="mui-bottom-fi mui-tab-1">
+						<a onclick="skip('center')">
+							<span class="mui-icon mui-icon-contact"></span>
+							<span class="mui-tab-label">个人中心</span>
+						</a>
+					</div>
+					<div class="mui-bottom-fi-no mui-tab-1">
+			<a onclick="skip('cart')">
+				<span class="mui-icon-extra mui-icon-extra-cart"></span>
+				<span class="mui-tab-label">购物车</span>
+			</a></div>
+					<div class="mui-bottom-fi mui-tab-1">
+						<a onclick="skip('setting')">
+							<span class="mui-icon mui-icon-gear"></span>
+							<span class="mui-tab-label">设置</span>
+						</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+		
+		
+		
+	</body>
+
+</html>

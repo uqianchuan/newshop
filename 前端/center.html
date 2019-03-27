@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>New Shop</title>
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<link href="css/mui.picker.css" rel="stylesheet" />
+		<link href="css/mui.poppicker.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+		<link rel="stylesheet" href="css/me.css" />
+		<link rel="stylesheet" href="css/icons-extra.css" />
+		<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+		<script src="js/me.js"></script>
+
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			
+			.mui-bar .mui-pull-left .mui-icon {
+				padding-right: 5px;
+				font-size: 28px;
+			}
+			
+			.mui-bar .mui-btn {
+				font-weight: normal;
+				font-size: 17px;
+			}
+			
+			.mui-bar .mui-btn-link {
+				top: 1px;
+			}
+			
+			.mui-content img {
+				width: 100%;
+			}
+			
+			.hm-description {
+				margin: 15px;
+			}
+			
+			.hm-description>li {
+				font-size: 14px;
+				color: #8f8f94;
+			}
+			
+			.mui-row.mui-fullscreen>[class*="mui-col-"] {
+				margin-top: 49%;
+				margin-bottom: 14%;
+				height: 58.2%;
+			}
+			
+			.mui-col-xs-3,
+			.mui-control-content {
+				overflow-y: auto;
+				height: 100%;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				line-height: 50px;
+				width: 100%;
+			}
+			
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				background-color: #fff;
+			}
+			
+			.content-center {
+				height: auto;
+				text-align: center;
+				padding-top: 10px;
+				margin-bottom: 50px;
+			}
+			
+			.center-left {
+				width: 30%;
+				padding-left: 10px;
+			}
+			
+			.center-right {
+				width: 70%;
+				text-align: left;
+			}
+			
+			.order-content{
+				width: 100%;
+				text-align: center;
+				border: solid #C8C7CC;
+				margin-bottom: 10px;
+			}
+			.order-content:hover{
+				width: 100%;
+				text-align: center;
+				border: solid #C8C7CC;
+				background-color: #FFFFFF;
+			}
+			.order-content img{
+				
+				width: 80px;
+				height: 110px;
+			}
+			.order-content-1{
+				
+				text-align: left;
+				margin-top: 20%;
+			}
+			.order-content-2{
+				
+				margin-top: 20%;
+				margin-right: 0px;
+			}
+			.order-content-2 span{
+				
+				margin-left: 10px;
+			}
+			.ding{
+				
+				text-align: left;
+				margin-bottom: 5px;
+			}
+		</style>
+		
+	</head>
+
+	<body onload="resetce()">
+		<div class="mui-navbar-inner mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>
+				</button>
+			<h1 class="mui-center mui-title">个人中心</h1>
+			<div class="login">
+				<div id="login-left">
+				<form action="login.html">
+				<button type="submit">登录</button>
+				</form>
+				</div>
+				<div id="login-right"></div>
+			</div>
+		</div>
+		<br /><br />
+		<div class="mui-content">
+			<!--轮播图片-->
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group">
+					<!-- 第一张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/b2.jpg">
+						</a>
+					</div>
+					<!-- 第二张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/b3.jpg">
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/b1.jpg">
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/b4.jpg">
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mui-row mui-fullscreen">
+			<div class="mui-col-xs-3">
+
+				<div class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+					<a class="mui-control-item" href="#content1" onclick="resetce()">完善信息</a>
+					<a class="mui-control-item" href="#content2" onclick="resetce()">个人资料</a>
+					<a class="mui-control-item" href="#content3" onclick="resetce()">帐户充值</a>
+					<a class="mui-control-item" href="#content4" onclick="queryOrder()">查看定单</a>
+					<a class="mui-control-item" href="#content5" onclick="resetce()">收货地址</a>
+					<a class="mui-control-item" href="#content6" onclick="resetce()">修改密码</a>
+				</div>
+			</div>
+			<div class="mui-col-xs-9" style="border-left: 1px solid #c8c7cc;">
+				<div class="content-center">
+					<div id="content1" class="mui-control-content mui-active">
+
+						<form>
+							<table class="content-center">
+								<tr>
+									<td class="center-left">
+										<h5>真实姓名<font color="red">*</font></h4>
+									</td>
+									<td class="center-right" >
+										<input type="text" id="client_name"  placeholder="请填写真实姓名" required="required" />
+									</td>
+								</tr>
+								<tr>
+									<td class="center-left">
+										<h5>出生日期<font color="red">*</font></h4>
+									</td>
+									<td class="center-right">
+										<input type="button" id='demo4' data-options='{"type":"date"}' class="btn mui-btn mui-btn-1" value="选择日期"/>
+									</td>
+								</tr>
+								<tr>
+									<td class="center-left">
+										<h5><font color="#EFEFF4">出生日期*</font></h4>
+									</td>
+									<td class="center-right">
+										<input type="text" id="result" class="ui-alert" disabled="disabled" />
+									</td>
+								</tr>
+								<tr>
+									<td class="center-left">
+										<h5>用户性别<font color="red">*</font></h4>
+									</td>
+									<td class="center-right">
+										<input type="radio" id="male" value="男" name="client_sex" required="required" />男
+										<input type="radio" id="female" value="女" name="client_sex" />女
+									</td>
+								</tr>
+								<tr>
+									<td class="center-left">
+										<h5>联系方式<font color="red">*</font></h4>
+									</td>
+									<td class="center-right">
+										<input type="text" id="client_tel" placeholder="请填写真实姓名" required="required" />
+									</td>
+								</tr>
+								<tr>
+									<td class="center-left">
+										<h5>用户地址<font color="red">*</font></h4>
+									</td>
+									<td class="center-right">
+										<input type="button" id='showCityPicker3' class="mui-btn mui-btn-1" value="选择地址" />
+									</td>
+								</tr>
+								<tr>
+									<td class="center-left">
+										<h5><font color="#EFEFF4">用户地址*</font></h4>
+									</td>
+									<td class="center-right">
+										<input type="text" id="cityResult3" class="ui-alert" disabled="disabled" />
+									</td>
+								</tr>
+							</table>
+							<div id="showError_3" style="color: red;"></div>
+							<button type="button" onclick="upinfo()">提交</button>
+
+						</form>
+					</div>
+
+					<div id="content2" class="mui-control-content">
+						<form>
+						<table class="content-center">
+								<tr>
+									<td class="center-left">
+										<h5>用户账号<font color="red">*</font></h4>
+									</td>
+									<td class="center-right" >
+										<input type="text" id="client_id" placeholder="请填写真实姓名" required="required" disabled="disabled"/>
+									</td>
+								</tr>
+								<tr>
+									<td class="center-left">
+										<h5>用户昵称<font color="red">*</font></h4>
+									</td>
+									<td class="center-right" >
+										<input type="text" id="client_rename" placeholder="请完善信息" required="required" disabled="disabled"/>
+									</td>
+								</tr>
+								<tr>
+									<td class="center-left">
+										<h5>会员等级<font color="red">*</font></h4>
+									</td>
+									<td class="center-right" >
+										<input type="text" id="rights"  placeholder="请完善信息" required="required" disabled="disabled"/>
+									</td>
+								</tr>
+								<tr>
+									<td class="center-left">
+										<h5>用户姓名<font color="red">*</font></h4>
+									</td>
+									<td class="center-right" >
+										<input type="text" id="client_name-2" placeholder="请完善信息" required="required" disabled="disabled"/>
+									</td>
+								</tr>
+								<tr>
+									<td class="center-left">
+										<h5>出生日期<font color="red">*</font></h4>
+									</td>
+									<td class="center-right" >
+										<input type="text" id="client_age" placeholder="请完善信息" required="required" disabled="disabled"/>
+									</td>
+								</tr>
+								<tr>
+									<td class="center-left">
+										<h5>用户性别<font color="red">*</font></h4>
+									</td>
+									<td class="center-right" >
+										<input type="text" id="client_sex" placeholder="请完善信息" required="required" disabled="disabled"/>
+									</td>
+								</tr>
+								<tr>
+									<td class="center-left">
+										<h5>联系方式<font color="red">*</font></h4>
+									</td>
+									<td class="center-right" >
+										<input type="text" id="client_tel-2" placeholder="请完善信息" required="required" disabled="disabled"/>
+									</td>
+								</tr>
+							
+						</table>
+						</form>
+
+					</div>
+					<div id="content3" class="mui-control-content">
+
+						<form>	
+						<table class="content-center">
+								<tr>
+									<td class="center-left">
+										<h5>用户金额<font color="red">*</font></h4>
+									</td>
+									<td class="center-right" >
+										<input type="text" id="client_money" placeholder="请填写真实姓名" required="required" disabled="disabled"/>
+									</td>
+								</tr>
+								
+								<tr>
+									<td class="center-left">
+										<h5>充值金额<font color="red">*</font></h4>
+									</td>
+									<td class="center-right" >
+										<input type="text" id="new_money" placeholder="请填写充值金额" required="required" />
+									</td>
+								</tr>
+							
+						</table>
+						
+								<div id="showError_2" style="color: red;"></div>
+								<button type="button" onclick="upmoney()">提交</button>
+							
+
+						</form>
+
+					</div>
+					<div id="content4" class="mui-control-content">
+						<h3>我的订单</h3>
+						<div class="content-center" id="order">
+							
+							
+						</div>
+					</div>
+					<div id="content5" class="mui-control-content">
+					
+						<form action="center.html" name="address-form">	
+						<table class="content-center">
+								<tr>
+									<td class="center-left">
+										<h5>用户地址<font color="red">*</font></h4>
+									</td>
+									<td class="center-right" >
+										<input type="text" id="client_address-2" placeholder="请填写地址" value="" required="required" disabled="disabled"/>
+									</td>
+								</tr>
+								
+								<tr>
+									<td class="center-left">
+										<h5>修改地址<font color="red">*</font></h4>
+									</td>
+									<td class="center-right">
+										<button id='showCityPicker2' class="mui-btn mui-btn-1" type='button'>选择地址</button>
+									</td>
+								</tr>
+								<tr>
+									<td class="center-left">
+										<h5><font color="#EFEFF4">用户地址*</font></h4>
+									</td>
+									<td class="center-right">
+										<input type="text" id="cityResult2" class="ui-alert"  required="required" disabled="disabled"/>
+									</td>
+								</tr>
+							
+						</table>
+						
+							
+								<button type="button" onclick="upaddress()">提交</button>
+							
+
+						</form>
+
+					</div>
+					<div id="content6" class="mui-control-content">
+
+						<form action="center.html">	
+						<table class="content-center">
+								<tr>
+									<td class="center-left">
+										<h5>当前密码<font color="red">*</font></h4>
+									</td>
+									<td class="center-right" >
+										<input type="password" id="old_password" placeholder="请填写原始密码" required="required" />
+									</td>
+								</tr>
+								
+								<tr>
+									<td class="center-left">
+										<h5>修改密码<font color="red">*</font></h4>
+									</td>
+									<td class="center-right" >
+										<input type="password" id="new_password" placeholder="请填写修改密码" required="required" />
+									</td>
+								</tr>
+								<tr>
+									<td class="center-left">
+										<h5>确认密码<font color="red">*</font></h4>
+									</td>
+									<td class="center-right" >
+										<input type="password" id="new_password_1" placeholder="请填写确认密码" required="required" />
+									</td>
+								</tr>
+							
+						</table>
+						
+								<div id="showError_1" style="color: red;"></div>
+								<button type="button" onclick="uppassword()">提交</button>
+							
+
+						</form>
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="mui-content">
+				<nav class="mui-bar mui-bar-tab">
+					<div class="mui-bottom-fi mui-tab-1">
+						<a id="defaultTab" class="mui-active" onclick="skip('index')">
+							<span class="mui-icon mui-icon-home"></span>
+							<span class="mui-tab-label">首页</span>
+						</a>
+					</div>
+					<div class="mui-bottom-fi mui-tab-1">
+						<a onclick="skip('products')">
+							<span class="mui-icon-extra mui-icon-extra-class"></span>
+							<span class="mui-tab-label">浏览</span>
+						</a>
+					</div>
+					<div class="mui-bottom-fi-no mui-tab-1">
+						<a onclick="skip('center')" >
+							<span class="mui-icon mui-icon-contact"></span>
+							<span class="mui-tab-label">个人中心</span>
+						</a>
+					</div>
+					<div class="mui-bottom-fi mui-tab-1">
+			<a onclick="skip('cart')">
+				<span class="mui-icon-extra mui-icon-extra-cart"></span>
+				<span class="mui-tab-label">购物车</span>
+			</a></div>
+					<div class="mui-bottom-fi mui-tab-1">
+						<a onclick="skip('setting')">
+							<span class="mui-icon mui-icon-gear"></span>
+							<span class="mui-tab-label">设置</span>
+						</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.js"></script>
+		<script src="js/mui.picker.min.js"></script>
+		<script src="js/mui.poppicker.js"></script>
+		<script src="js/city.data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			(function($) {
+				$.init();
+				var result = $('#result')[0];
+				var btns = $('.btn');
+				btns.each(function(i, btn) {
+					btn.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						/*
+						 * 首次显示时实例化组件
+						 * 示例为了简洁，将 options 放在了按钮的 dom 上
+						 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+						 */
+						var picker = new $.DtPicker(options);
+						picker.show(function(rs) {
+							/*
+							 * rs.value 拼合后的 value
+							 * rs.text 拼合后的 text
+							 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+							 * rs.m 月，用法同年
+							 * rs.d 日，用法同年
+							 * rs.h 时，用法同年
+							 * rs.i 分（minutes 的第二个字母），用法同年
+							 */
+							result.value = rs.text;
+							/* 
+							 * 返回 false 可以阻止选择框的关闭
+							 * return false;
+							 */
+							/*
+							 * 释放组件资源，释放后将将不能再操作组件
+							 * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+							 * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+							 * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+							 */
+							picker.dispose();
+						});
+					}, false);
+				});
+			})(mui);
+		</script>
+
+		<script>
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					/**
+					 * 获取对象属性的值
+					 * 主要用于过滤三级联动中，可能出现的最低级的数据不存在的情况，实际开发中需要注意这一点；
+					 * @param {Object} obj 对象
+					 * @param {String} param 属性名
+					 */
+					var _getParam = function(obj, param) {
+						return obj[param] || '';
+					};
+
+					//					//级联示例
+					var cityPicker3 = new $.PopPicker({
+						layer: 3
+					});
+					cityPicker3.setData(cityData3);
+					var showCityPickerButton = doc.getElementById('showCityPicker3');
+					var cityResult3 = doc.getElementById('cityResult3');
+					showCityPickerButton.addEventListener('tap', function(event) {
+						cityPicker3.show(function(items) {
+
+							cityResult3.value = _getParam(items[0], 'text') + " " + _getParam(items[1], 'text') + " " + _getParam(items[2], 'text');
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+				});
+			})(mui, document);
+		</script>
+
+		<script>
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					/**
+					 * 获取对象属性的值
+					 * 主要用于过滤三级联动中，可能出现的最低级的数据不存在的情况，实际开发中需要注意这一点；
+					 * @param {Object} obj 对象
+					 * @param {String} param 属性名
+					 */
+					var _getParam = function(obj, param) {
+						return obj[param] || '';
+					};
+
+					//					//级联示例
+					var cityPicker2 = new $.PopPicker({
+						layer: 3
+					});
+					cityPicker2.setData(cityData3);
+					var showCityPickerButton = doc.getElementById('showCityPicker2');
+					var cityResult2 = doc.getElementById('cityResult2');
+					showCityPickerButton.addEventListener('tap', function(event) {
+						cityPicker2.show(function(items) {
+
+							cityResult2.value = _getParam(items[0], 'text') + " " + _getParam(items[1], 'text') + " " + _getParam(items[2], 'text');
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+				});
+			})(mui, document);
+		</script>
+	</body>
+
+</html>
